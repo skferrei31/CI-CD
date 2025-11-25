@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    environment {
+        REMOTE_HOST = '192.168.37.64'  // put your server IP here
+    }
+
+    stages {
+        stage('Run Remote Command') {
+            steps {
+                withCredentials([
+                    usernamePassword(
+                        credentialsId: 'access_key',
+                        usernameVariable: 'USER',
+                        passwordVariable: 'PASS'
+                    )
+                ]) {
+                    sh '''
+                        sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no "$USER"@"$REMOTE_HOST" "echo Remote connection success && hostname && pwd "
+                    '''
+                }
+            }
+        }
+    }
+}
