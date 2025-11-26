@@ -1,21 +1,21 @@
 pipeline {
   environment {
-    calculator_image = 'yxos/calculator'
+    calculator_image = 'malejaj/calculator'
     
-    sum_image = 'yxos/sum'
-    sub_image = 'yxos/sub'
-    mul_image = 'yxos/mul'
-    div_image = 'yxos/div'
-    sum_link = 'https://github.com/AnonymousWhizzer/Sum_service.git'
-    sub_link = 'https://github.com/AnonymousWhizzer/Sub_service.git'
-    mul_link = 'https://github.com/AnonymousWhizzer/Mul_service.git'
-    div_link = 'https://github.com/AnonymousWhizzer/Div_service.git'
-    calculator_link = 'https://github.com/AnonymousWhizzer/Calculator_service.git'
+    sum_image = 'malejaj/sum'
+    sub_image = 'malejaj/sub'
+    mul_image = 'malejaj/mul'
+    div_image = 'malejaj/div'
+    sum_link = 'https://github.com/skferrei31/Sum_service.git'
+    sub_link = 'https://github.com/skferrei31/Sub_service.git'
+    mul_link = 'https://github.com/skferrei31/Mul_service.git'
+    div_link = 'https:skferrei31//github.com/skferrei31/Div_service.git'
+    calculator_link = 'https://github.com/skferrei31/Calculator_service.git'
     dockerImage = ""
     registryCredential = 'repo_login'
   
     //provide this line with one of your worker floating IP
-    build_arg="--build-arg HIS_IP='<worker_floating_ip>' ."
+    build_arg="--build-arg HIS_IP='192.168.37.158' ." //worker2
   }
 
   agent any
