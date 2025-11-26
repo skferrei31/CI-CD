@@ -12,7 +12,7 @@ pipeline {
     div_link = 'https:skferrei31//github.com/skferrei31/Div_service.git'
     calculator_link = 'https://github.com/skferrei31/Calculator_service.git'
     dockerImage = ""
-    registryCredential = 'repo_login'
+    registryCredential = 'f50c364b-461f-47f6-a279-353ccc88c224'
   
     //provide this line with one of your worker floating IP
     build_arg="--build-arg HIS_IP='192.168.37.158' ." //worker2
